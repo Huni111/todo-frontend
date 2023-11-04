@@ -15,7 +15,7 @@ const App = () => {
   const fetchData = async () => {
 
     try {
-      const resp = await fetch('http://localhost:5555');
+      const resp = await fetch('https://todo-list-api-jnl7.onrender.com/');
       const data = await resp.json();
       setTask(data);
       setError(null);
@@ -46,7 +46,7 @@ if(event && key === "Enter") {
   event.preventDefault();
   console.log("enter")
 
-  const resp = await fetch('http://localhost:5555/newtask', {
+  const resp = await fetch('https://todo-list-api-jnl7.onrender.com/newtask', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -73,7 +73,7 @@ if(event && key === "Enter") {
 
 const deleteTask = async(x) => {
   try{ 
-    const resp = await fetch(`http://localhost:5555/tasks/${x}`, {
+    const resp = await fetch(`https://todo-list-api-jnl7.onrender.com/tasks/${x}`, {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json',
