@@ -30,7 +30,7 @@ const App = () => {
 
   useEffect(() => {
     fetchData()
-  }, [tasks])
+  }, [])
 
 ///STORE INPUT:
   const storeInput = (event) => {
